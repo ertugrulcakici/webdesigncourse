@@ -1,89 +1,189 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <title>Ertuğrul Çakıcı Personal Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .card-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.21.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.21.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.21.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.21.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.21.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.21.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.21.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.21.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.21.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.21.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+      }
+
+      .card-location {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        background-color: #f7cac9; /* new background color */
+        text-align: center; /* center text horizontally */
+        padding: 0.5rem; /* add some padding */
+        border-radius: 0.5rem; /* add some border radius */
+      }
+
+      .card-content {
+        display: flex;
+        flex-direction: row;
+        background-color: #f0f0f0;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .card-text {
+        flex-grow: 1;
+        margin-right: 1rem;
+        text-align: center;
+      }
+
+      .card-image {
+        flex-grow: 0;
+        width: 40%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 0.5rem;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .card {
+          width: 90%;
+        }
+
+        .card-content {
+          flex-direction: column;
+        }
+
+        .card-text {
+          margin: 0.5rem 0;
+        }
+
+        .card-image {
+          width: 100%;
+          margin-top: 0.5rem;
+        }
       }
     </style>
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <div class="container">
+      <div class="card-list">
+        <div class="card">
+          <div class="card-location">Location: Prague</div>
+          <div class="card-content">
+            <div class="card-text">
+              At first times of our erasmus, my friend and I decided to go on a
+              spontaneous trip to Prague for two days. Despite the short stay,
+              we were able to see and experience so much of this stunning city.
+              We walked through the winding streets of the Old Town, admiring
+              the historic buildings and charming cafes. We visited the famous
+              Charles Bridge and were captivated by the breathtaking views of
+              the Vltava River. In the evening, we dined on traditional Czech
+              cuisine and enjoyed a night out at a local bar. Although our time
+              in Prague was brief, it was a trip that we will always cherish and
+              remember fondly.
+            </div>
+            <img class="card-image" src="assets/1.jpg" alt="Image 1" />
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-location">Location: Italy(Venice)</div>
+          <div class="card-content">
+            <div class="card-text">
+              During our time in Erasmus, my friend and I decided to take a trip
+              to Venice. It was one of the most enchanting cities we had ever
+              visited. We wandered through the winding streets and narrow
+              canals, marveling at the beauty of the old buildings and bridges.
+              We took a gondola ride and were serenaded by a charming gondolier
+              as we glided through the shimmering waters. We also visited the
+              famous Piazza San Marco, where we were mesmerized by the intricate
+              details of the Basilica di San Marco and the ornate architecture
+              of the Doge's Palace. We indulged in delicious Italian food and
+              gelato, and soaked up the lively atmosphere of the city. It was a
+              magical trip that we will always remember fondly.
+            </div>
+            <img class="card-image" src="assets/2.jpg" alt="Image 1" />
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-location">Location: Italy(Florence)</div>
+          <div class="card-content">
+            <div class="card-text">
+              Florence, the birthplace of Renaissance, was a city that
+              fascinated me from the moment I stepped into its historic center.
+              Walking through the narrow streets lined with palaces and
+              cathedrals, I felt as though I was transported back in time to the
+              15th century when Florence was at its peak. My friend and I spent
+              our days admiring the masterpieces of Michelangelo, Leonardo da
+              Vinci, and Botticelli in the Uffizi Gallery and the Accademia
+              Gallery. We also enjoyed strolling through the Boboli Gardens,
+              where we were greeted with stunning views of the city. In the
+              evenings, we savored delicious Tuscan cuisine and watched the
+              sunset over the Arno River from the Ponte Vecchio. Florence was a
+              city that left a lasting impression on me, and I knew I would
+              always cherish the memories of our trip.
+            </div>
+            <img class="card-image" src="assets/3.jpg" alt="Image 1" />
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-location">Location: Italy(Bologna)</div>
+          <div class="card-content">
+            <div class="card-text">
+              Bologna is a city in northern Italy, known for its medieval
+              architecture and vibrant culture. It's also home to the oldest
+              university in the world, the University of Bologna, which was
+              founded in 1088. During our time in Italy, my friend and I decided
+              to take a day trip to this historic city. We strolled through the
+              narrow streets and admired the beautiful architecture of the old
+              buildings. We also visited the famous Piazza Maggiore, where we
+              were captivated by the stunning Basilica di San Petronio and the
+              Fountain of Neptune. In the evening, we dined on traditional
+              Italian cuisine and enjoyed a night out at a local bar. It was a
+              trip that we will always remember fondly.
+            </div>
+            <img class="card-image" src="assets/4.jpg" alt="Image 1" />
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-location">Location: Italy(San Gimignano)</div>
+          <div class="card-content">
+            <div class="card-text">
+              San Gimignano is a charming medieval town located in the heart of
+              Tuscany, Italy. With its stunning views of the rolling hills and
+              lush vineyards, it's easy to see why it's called the "Town of Fine
+              Towers." During our trip to Italy, my friends and I decided to
+              take a day trip to this picturesque town. We strolled through the
+              narrow streets and explored the ancient architecture of the town,
+              admiring the medieval towers and the beautiful frescoes. We also
+              sampled some of the famous local wines and indulged in the
+              delicious Tuscan cuisine. As the sun began to set, we sat on a
+              hilltop terrace and watched the breathtaking sunset, feeling
+              grateful for the opportunity to experience such a magical place.
+            </div>
+            <img class="card-image" src="assets/5.jpg" alt="Image 1" />
+          </div>
+        </div>
+      </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
   </body>
 </html>
