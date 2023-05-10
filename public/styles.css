@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.button-text {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+
+}
+
+.cities-to-visit {
+  background-image: url('assets/to-go.jpeg'); /* Ziyaret edeceğiniz şehirlerin resmini buraya ekleyin */
+}
+
+.visited-cities {
+  background-image: url("assets/went.jpeg"); /* Ziyaret ettiğiniz şehirlerin resmini buraya ekleyin */
+}
